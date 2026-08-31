@@ -1,0 +1,30 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "The gateway is the service that sits before the target LLM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "dev:classifier": "tsx watch src/dev-classifier.ts",
+    "dev:http-classifier": "CLASSIFIER_MODE=http CLASSIFIER_URL=http://127.0.0.1:4000/classify tsx watch src/server.ts",
+    "dev:real-ml": "CLASSIFIER_MODE=http CLASSIFIER_URL=http://127.0.0.1:4000/classify tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.14.4",
+    "@hyperledger/fabric-gateway": "^1.11.0",
+    "fastify": "^5.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "private": true
+}

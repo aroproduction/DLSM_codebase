@@ -1,0 +1,161 @@
+{
+  "identity": {
+    "mspid": "Org1MSP",
+    "identity_name": "dlsm-gateway@org1.example.com"
+  },
+  "records": [
+    {
+      "incident": "jailbreak_attempt",
+      "prompt_hash": "100eff4a07dedd7040cc0d31a0bc5fb6ff5d9d26902128e8901d5520b2b57e1c",
+      "decision": "block",
+      "incident_class": "prompt_injection",
+      "risk_score": 0.9979,
+      "session_risk": 0.9979,
+      "penalty": 30,
+      "event_id": "evt-acad-cons-000",
+      "score_after": 50,
+      "tier_after": "Monitored",
+      "conversation_id": "acad-cons-jailbreak_attempt"
+    },
+    {
+      "incident": "prompt_injection",
+      "prompt_hash": "fdf1a7f105e3385ce9f5ac197e608e82f51f54512aceccc6abc9e5ccc0988763",
+      "decision": "block",
+      "incident_class": "prompt_injection",
+      "risk_score": 0.9969,
+      "session_risk": 0.9969,
+      "penalty": 30,
+      "event_id": "evt-acad-cons-001",
+      "score_after": 20,
+      "tier_after": "ReadOnly",
+      "conversation_id": "acad-cons-prompt_injection"
+    },
+    {
+      "incident": "data_extraction",
+      "prompt_hash": "bb13df2344cba1087083f745a787f98d4c23f01260a85b5bab257b168ee7e3ac",
+      "decision": "block",
+      "incident_class": "harmful_content",
+      "risk_score": 0.992,
+      "session_risk": 0.992,
+      "penalty": 25,
+      "event_id": "evt-acad-cons-002",
+      "score_after": 0,
+      "tier_after": "Suspended",
+      "conversation_id": "acad-cons-data_extraction"
+    },
+    {
+      "incident": "policy_infraction",
+      "prompt_hash": "52ce6b41207164aec451f14bba55eb8ac32820a2c4e653735347957159e57202",
+      "decision": "block",
+      "incident_class": "harmful_content",
+      "risk_score": 0.9981,
+      "session_risk": 0.9981,
+      "penalty": 25,
+      "event_id": "evt-acad-cons-003",
+      "score_after": 0,
+      "tier_after": "Suspended",
+      "conversation_id": "acad-cons-policy_infraction"
+    },
+    {
+      "incident": "multi_turn_subversion",
+      "prompt_hash": "26631d31ebce37e898ceb4a18cc975ef0871e61e3e78aa6ae02534f485212eb9",
+      "decision": "block",
+      "incident_class": "harmful_content",
+      "risk_score": 0.9985,
+      "session_risk": 2.436196,
+      "penalty": 35,
+      "event_id": "evt-mt-acad-cons-mt-3",
+      "score_after": 0,
+      "tier_after": "Suspended",
+      "conversation_id": "acad-cons-mt"
+    }
+  ],
+  "on_chain": {
+    "current_score": 0,
+    "current_tier": "Suspended",
+    "incident_count": 7,
+    "incident_ids": [
+      "evt-acad-cons-000",
+      "evt-acad-cons-001",
+      "evt-acad-cons-002",
+      "evt-acad-cons-003",
+      "evt-acad-cons-mt-00",
+      "evt-acad-cons-mt-01",
+      "evt-mt-acad-cons-mt-3"
+    ],
+    "applied_penalties": [
+      {
+        "event_id": "evt-acad-cons-000",
+        "penalty": 30
+      },
+      {
+        "event_id": "evt-acad-cons-001",
+        "penalty": 30
+      },
+      {
+        "event_id": "evt-acad-cons-002",
+        "penalty": 25
+      },
+      {
+        "event_id": "evt-acad-cons-003",
+        "penalty": 25
+      },
+      {
+        "event_id": "evt-acad-cons-mt-00",
+        "penalty": 30
+      },
+      {
+        "event_id": "evt-acad-cons-mt-01",
+        "penalty": 25
+      },
+      {
+        "event_id": "evt-mt-acad-cons-mt-3",
+        "penalty": 35
+      }
+    ]
+  },
+  "on_chain_incidents": [
+    {
+      "eventId": "evt-acad-cons-000",
+      "penalty": 30,
+      "appliedAt": "2026-08-17T19:41:48.650Z",
+      "appliedAtMillis": 1786995708650
+    },
+    {
+      "eventId": "evt-acad-cons-001",
+      "penalty": 30,
+      "appliedAt": "2026-08-17T19:41:56.912Z",
+      "appliedAtMillis": 1786995716912
+    },
+    {
+      "eventId": "evt-acad-cons-002",
+      "penalty": 25,
+      "appliedAt": "2026-08-17T19:42:05.203Z",
+      "appliedAtMillis": 1786995725203
+    },
+    {
+      "eventId": "evt-acad-cons-003",
+      "penalty": 25,
+      "appliedAt": "2026-08-17T19:42:13.526Z",
+      "appliedAtMillis": 1786995733526
+    },
+    {
+      "eventId": "evt-acad-cons-mt-00",
+      "penalty": 30,
+      "appliedAt": "2026-08-17T19:42:21.902Z",
+      "appliedAtMillis": 1786995741902
+    },
+    {
+      "eventId": "evt-acad-cons-mt-01",
+      "penalty": 25,
+      "appliedAt": "2026-08-17T19:42:30.498Z",
+      "appliedAtMillis": 1786995750498
+    },
+    {
+      "eventId": "evt-mt-acad-cons-mt-3",
+      "penalty": 35,
+      "appliedAt": "2026-08-17T19:42:34.673Z",
+      "appliedAtMillis": 1786995754673
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "dataset": "combined",
+  "dataset_source": "prompt-injections-benchmark + singleturn_jailbreak_dataset (malicious only)",
+  "n_train": 11022,
+  "n_validation": 1378,
+  "n_test": 1378,
+  "max_length": 384,
+  "num_epochs_trained": 15,
+  "best_epoch_val_f1": 15.0,
+  "min_val_loss_epoch": 4.0,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.05,
+  "warmup_ratio": 0.15,
+  "gradient_accum": 2,
+  "train_batch": 32,
+  "test_accuracy": 0.9572,
+  "test_precision": 0.9793,
+  "test_recall": 0.9657,
+  "test_f1": 0.9724,
+  "test_roc_auc": 0.9879,
+  "test_pr_auc": 0.9968,
+  "id2label": {
+    "0": "benign",
+    "1": "malicious"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ml_model": {
+    "ok": true,
+    "elapsed_s": 0.0
+  },
+  "reputation": {
+    "ok": true,
+    "elapsed_s": 0.0
+  },
+  "multiturn": {
+    "ok": true,
+    "elapsed_s": 0.0
+  },
+  "gateway_e2e": {
+    "ok": true,
+    "elapsed_s": 0.0
+  },
+  "consortium": {
+    "ok": true,
+    "elapsed_s": 0.0
+  }
+}

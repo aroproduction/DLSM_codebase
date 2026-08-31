@@ -1,0 +1,19 @@
+{
+  "name": "dlsm-contract",
+  "version": "1.7.0",
+  "description": "DLSM reputation and incident chaincode for Hyperledger Fabric",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "fabric-chaincode-node start"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.5.4",
+    "fabric-shim": "^2.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "typescript": "^5.4.0"
+  }
+}

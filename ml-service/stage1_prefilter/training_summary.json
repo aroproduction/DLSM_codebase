@@ -1,0 +1,18 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "dataset": "combined",
+  "dataset_source": "prompt-injections-benchmark + singleturn_jailbreak_dataset (malicious only)",
+  "max_length": 384,
+  "num_epochs_trained": 5,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.05,
+  "warmup_ratio": 0.15,
+  "gradient_accum": 2,
+  "test_accuracy": 0.955,
+  "test_f1": 0.9715,
+  "test_loss": 0.1396,
+  "id2label": {
+    "0": "benign",
+    "1": "malicious"
+  }
+}
